@@ -12,7 +12,7 @@
     <article class="col-md-3 text-end">
      <!--  <button type="button" class="btn  me-2">Login</button> --> 
      <button *ngIf="!(afAuth.user | async)" [routerLink]="['sign-in']" class="btn">Login</button>
-     <button *ngIf="(afAuth.user | async)" (click)="logout()" class="btn">Logout</button>
+     <button *ngIf="(afAuth.user | async)" [routerLink]= "['']" (click)="logout()" class="btn">Logout</button>
     </article>
   </header>
 </section>
